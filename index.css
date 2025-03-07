@@ -1,0 +1,154 @@
+@font-face {
+    font-family: 'Sans';
+    src: url('NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf');
+}
+
+* {
+    font-family: 'sans';
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-image: linear-gradient(to right, gray, rgb(175, 166, 166), #f0f0f0);
+    /*background-color: #f0f0f0;*/
+}
+
+.logo {
+    width: 35px;
+    margin-bottom: 10px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+}
+
+.app {
+    font-weight: 600;
+    font-size: 22px;
+    margin-top: -6px;
+}
+
+span {
+    color: blue;
+    cursor: pointer;
+}
+
+.container1 {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.87);
+    padding: 10px;
+    box-shadow: 0 0 3px black;
+    border-radius: 13px;
+}
+
+.container1.active {
+    display: flex;
+    transition: 0.4s ease-in-out;
+}
+
+.container2 {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.87);
+    padding: 10px;
+    box-shadow: 0 0 3px black;
+    border-radius: 13px;
+}
+
+.container2.active {
+    display: flex;
+}
+
+h2 {
+    color: #333;
+}
+
+input {
+    margin: 5px;
+    padding: 8px;
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid rgb(131, 127, 127);
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 7px blue;
+    border-radius: 6px;
+    border: none;
+}
+
+button {
+    padding: 8px 15px;
+    background-color: #2894a7;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #216788;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+footer img {
+    animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+footer img {
+    width: 30px;
+}
+
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.password-container input {
+    width: 92.3%;
+    padding-right: 0px;
+    background-color: none;
+}
+
+.password-container .toggle-password {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #555;
+}

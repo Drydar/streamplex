@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>StreamPlex-User/Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script type="module" src="app.js"></script>
+</head>
+<body>
+    <div class="top">
+        <div class="top-elements">
+            <div class="top-name">
+                <img onclick="location.href='faq.html';" src="streamplex.png">
+                <p>STREAMPLEX</p>
+            </div>
+
+            <div class="points-withdraw">
+                <p class='points' id="pointsDisplay" style="margin-top: -15px;">Points earned: 0</p>
+                <button class="withdraw"><a href="withdrawal.html" class="withdraw-btn">Withdraw</a></button>
+            </div>
+        </div>
+    </div>
+    <h1 id="welcomeMessage" style="margin-top: 14vh; text-align: center;">Hello </h1>
+            <div class="userid">
+                <p class="points">User ID:</p>
+                <p><span id="userIdDisplay"></span></p>
+                <img id="copyUserIdBtn" src="copyblack.png">
+            </div>
+
+    <div class="write-up">
+        <div class="content2">
+            <p><b>Unlock Academic Growth</b></p>
+            <p>Visit our <b>curated library</b> of <b>study guides, interactive lessons, and expert insights,</b> all designed to fuel your competitive edge.</p>
+            <p style="margin-top: 40px;"><b>Ready to power up your brain?</b></p>
+            <button class="btn" onclick="location.href='education.html';">Education</button>
+        </div>
+
+        <div class="content1">
+            <p><b>Challenge your mind</b></p>
+            <p><b>Think you're the Sharpest?</b></p>
+            <p>Dive into a world of <b>puzzle</b> and <b>brain teasers</b> packed with <b>tricky challenges</b> designed to test your <b>logic</b> and <b>award your thinking.</b></p>
+            <p style="margin-top: 40px;"><b>Ready to play and improve your genuis?</b></p>
+            <button class="btn" onclick="location.href='games.html';">Play Games</button>
+        </div>
+    </div>
+    <div class="external">
+        <img src="whatsapp.png" class="whatsapp">
+        <img src="customercare_white.png" class="customer_care">
+        <img id="logoutBtn" src="logoutwhite.png" class="logout">
+    </div>
+</body>
+</html>

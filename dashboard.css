@@ -1,0 +1,230 @@
+@font-face {
+    font-family: 'Sans';
+    src: url(NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf);
+}
+
+@font-face {
+    font-family: 'Math';
+    src: url('NotoSansMath-Regular.ttf');
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(248, 244, 244);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.top {
+    font-family: 'Sans';
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(172, 167, 167);
+    padding: 3px;
+    margin: 0px;
+}
+
+.top-elements {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-name {
+    font-family: 'Sans';
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    font-weight: 800;
+    padding: 2px;
+    margin: 0px;
+    color: white;
+    text-shadow: 0 0 6px black;
+    gap: 10px;
+    letter-spacing: 1.5px;
+    margin-left: 10px;
+}
+
+.top-name img {
+    width: 30px;
+    padding: 5px;
+    background-color: transparent;
+    border-radius: 30%;
+    box-shadow: 0 0 7px black;
+}
+
+.name-point {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    justify-content:left;
+}
+
+.points-withdraw {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    margin: 1px;
+    margin-top: 15px;
+}
+
+.points {
+    font-size: 18px;
+    color: #000000;
+    padding: 1px;
+    margin: 1px;
+    font-weight: 600;
+}
+
+.withdraw-btn {
+    text-decoration: none;
+    color: black;
+    text-shadow: 0 0 5px white;
+}
+
+.withdraw {
+    background-image: linear-gradient(to left, rgb(92, 88, 88), rgb(129, 235, 229), rgb(194, 226, 118));
+    width: 130px;
+    margin: 10px;
+    border-radius: 7px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+    font-family: 'Math';
+    padding: 10px;
+    font-size: 16px;
+    margin-top: -8px;
+}
+.withdraw:active {
+    background-color: black;
+}
+
+h1 {
+    font-size: 23px;
+    font-family: 'Math';
+}
+
+.userid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    justify-content: right;
+    padding: 1px;
+    margin-right: 5px;
+    margin-top: -10px;
+    font-family: 'Sans';
+}
+
+.userid img {
+    width: 30px;
+}
+
+#userIdDisplay {
+    width: 100px;
+    max-width: 120px;
+    font-size: 12px;
+    color: black;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: none;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-family: 'Sans';
+    font-weight: 600;
+    border-radius: 7px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 4px black;
+    letter-spacing: 1px;
+    width: 150px;
+    font-size: 17px;
+}
+
+button:hover {
+    background-color: rgb(58, 55, 55);
+}
+
+.write-up {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 25%;
+    padding: 1px;
+    margin: 1px;
+    margin-top: 5vh;
+    justify-content: center;
+}
+
+.content1 {
+    font-family: 'Math';
+    color: black;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    background-color: none;
+    padding: 20px;
+    margin: 8px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.61);
+    border-radius: 11px;
+    width: 40% auto;
+}
+
+.content2 {
+    margin-top: 50px;
+    font-family: 'Math';
+    color: black;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    background-color: none;
+    margin-bottom: 100px;
+    padding: 20px;
+    margin: 8px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.61);
+    border-radius: 11px;
+    width: 40% auto ;
+}
+
+.whatsapp {
+    width: 45px;
+    position: fixed;
+    bottom: 15px;
+    right: 10px;
+    border-radius: 50%;
+}
+
+.customer_care {
+    width: 35px;
+    position: fixed;
+    bottom: 70px;
+    right: 10px;
+    background-color: rgb(29, 151, 5);
+    padding: 5px;
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.815);
+}
+
+.logout {
+    width: 35px;
+    background-color: rgb(29, 151, 5);
+    padding: 5px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 15px;
+    left: 10px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.815);
+}
+
+.external {
+    padding: 10px;
+}
