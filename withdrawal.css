@@ -1,0 +1,208 @@
+@font-face {
+    font-family: 'Sans';
+    src: url('NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf');
+}
+
+/* General Page Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+* {
+    font-family: 'Sans';
+}
+
+.container img {
+    width: 25px;
+}
+
+.container {
+    background: #f0eded;
+    padding: 30px;
+    margin-top: 40px;
+    width: 85%;
+    max-width: 600px;
+    box-shadow: 0 0px 7px rgba(0, 0, 0, 0.808);
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* Header */
+h2 {
+    margin: 0 0 20px;
+    font-size: 20px;
+    color: white;
+    text-shadow: 0 0 3px black;
+}
+
+.container p {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* Withdrawal Options */
+.withdrawal-options button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.withdrawal-options button:active {
+    background: #0056b3;
+    transform: translateY(-3px);
+}
+
+/* Form Section */
+.form-section {
+    display: none;
+    background: #f9f9f9;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.747);
+    border-radius: 8px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.form-section.fade-in {
+    opacity: 1;
+}
+
+.form-section h3 {
+    margin-top: 0;
+    font-size: 22px;
+    color: #007bff;
+}
+
+.form-section label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+    color: #555;
+}
+
+.form-section input {
+    width: 95%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: none;
+    border-bottom: 1px solid gray;
+    background: none;
+    font-family: 'Sans';
+}
+
+input:focus {
+    outline: none;
+}
+
+.form-section select {
+    width: 98.5%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: none;
+    border-bottom: 1px solid gray;
+    background: none;
+    font-family: 'Sans';
+}
+
+select:focus {
+    outline: none;
+}
+
+/* Submit Button */
+.form-section button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.form-section button:hover {
+    background: #0260c5;
+    transform: scale(1.05);
+}
+
+/*input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: none;
+
+}
+
+input:focus {
+    outline: none;
+    border: none;
+    box-shadow: 0 0 6px rgb(0, 102, 255);
+}
+
+select {
+    border: none;
+}
+
+select:focus {
+    outline: none;
+    box-shadow: 0 0 10px black;
+}*/
+
+/* Success Popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1000;
+    animation: slideDown 0.5s ease-out;
+}
+
+.popup p {
+    margin: 0 0 15px;
+    font-size: 16px;
+}
+
+.popup button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+@keyframes slideDown {
+    from { transform: translate(-50%, -100%); }
+    to { transform: translate(-50%, -50%); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+}

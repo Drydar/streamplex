@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'Math';
+    src: url('NotoSansMath-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'NunitoSans';
+    src: url('NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to left, black,rgb(58, 56, 56), rgb(55, 55, 63));
+    color: rgb(197, 192, 192);
+}
+
+img {
+    width: 60px;
+    height: 60px;
+}
+
+.top {
+    display: flex;
+    margin: 1px;
+    padding: 5px;
+    align-items: center;
+    gap: 7px;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    align-items:first baseline;
+    font-family: 'NunitoSans';
+    font-size: 14px;
+    text-shadow: 0 0 3px rgb(143, 141, 141);
+}
+
+.btn {
+    display: flex;
+    flex-wrap: wrap;
+    gap:6vh;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 1px;
+    margin-top: -10px;
+}
+
+button {
+    padding: 10px;
+    margin: 5px;
+    width: 160px;
+    height: 120px;
+    background-image: linear-gradient(to left, rgb(217, 217, 221), rgb(160, 175, 218), rgb(110, 216, 219));
+    border: none;
+    transition: 0.2 ease-in-out;
+    font-weight: 600;
+    font-family: 'NunitoSans';
+    color: black;
+    font-size: 23px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    transition: 0.3s ease-in-out;
+}
+
+#n1 {
+    border-radius: 33px;
+}
+
+#n2 {
+    border-radius: 33px;
+}
+
+button:disabled {
+    color: rgb(233, 217, 217);
+    background-image: linear-gradient(to right, rgb(177, 169, 169), gray);
+    box-shadow: 0 0 0px rgb(255, 255, 255);
+}
+
+button:active {
+    scale: 0.8;
+    background-image: linear-gradient(to left, purple, blue, indigo);
+    color: whitesmoke;
+}
+
+button:active:disabled {
+    scale: 0.9;
+    background-image: linear-gradient(to left, gray, gray, gray);
+    color: whitesmoke;
+}

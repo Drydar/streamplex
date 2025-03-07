@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>StreamPlex-Withdrawal</title>
+    <link rel="stylesheet" href="withdrawal.css">
+</head>
+<body>
+<div class="container">
+    <img src="streamplex.png">
+    <h2>StreamPlex Withdrawal</h2>
+
+    <div class="withdrawal-options">
+        <button onclick="showForm('bankForm')">Bank Withdrawal</button>
+        <button onclick="showForm('airtimeForm')">Airtime Withdrawal</button>
+        <button onclick="showForm('dataForm')">Data Withdrawal</button>
+    </div>
+
+    <div id="successPopup" class="popup">
+        <p>Form submitted successfully!</p>
+        <button onclick="closePopup()">OK</button>
+    </div>
+
+    <!-- Bank Form -->
+    <form class="form-section" id="bankForm" onsubmit="showPopup(event)" action="https://formspree.io/f/xyzegjbd" method="POST">
+        <h3>Bank Withdrawal</h3>
+        <div style="text-align: left;">
+            <p class="point">1 POINT = &#x20A6; 1</p>
+            <p>Minimum withdrawal = 100points</p>
+            <label>Your UID</label>
+            <input type="text" name="UID" required>
+
+            <label>Bank Name</label>
+            <input type="text" name="Bank Name" required>
+
+            <label>Account Name (Name on the account)</label>
+            <input type="text" name="Account Name" required>
+
+            <label>Account Number</label>
+            <input type="number" name="Account Number" required>
+
+            <label>Amount</label>
+            <input type="number" name="Amount" required>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Airtime Form -->
+    <form class="form-section" id="airtimeForm" onsubmit="showPopup(event)" action="https://formspree.io/f/xyzegjbd" method="POST">
+        <h3>Airtime Withdrawal</h3>
+        <div style="text-align: left;">
+            <p class="point">1 POINT = &#x20A6; 1</p>
+            <label>Your UID</label>
+            <input type="text" name="UID" required>
+
+            <label>Network</label>
+            <select name="Network" required class="custom-select">
+                <option>MTN</option>
+                <option>Airtel</option>
+                <option>Glo</option>
+                <option>9mobile</option>
+            </select>
+
+            <label>Phone Number</label>
+            <input type="number" name="Phone Number" required>
+
+            <label>Amount</label>
+            <input type="number" name="Amount" required>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Data Form -->
+    <form class="form-section" id="dataForm" onsubmit="showPopup(event)" action="https://formspree.io/f/xyzegjbd" method="POST">
+        <h3>Data Withdrawal</h3>
+        <div style="text-align: left;">
+            <label>Your UID</label>
+            <input type="text" name="UID" required>
+
+            <label>Network</label>
+            <select name="Network" required>
+                <option>MTN</option><option>Airtel</option><option>Glo</option><option>9mobile</option>
+            </select>
+
+            <label>Phone Number</label>
+            <input type="text" name="Phone Number" required>
+
+            <label>Data Package</label>
+            <select name="Data Package" required>
+                <option>350 points for 500MB</option>
+                <option>700 points for 1GB</option>
+                <option>1400 points for 2GB</option>
+                <option>3500 points for 5GB</option>
+            </select>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <p>Rydar-Tech Group</p>
+</div>
+<script>
+    function showForm(formId) {
+        const forms = document.querySelectorAll('.form-section');
+        forms.forEach(form => {
+            form.style.display = 'none';
+            form.classList.remove('fade-in');
+        });
+        const form = document.getElementById(formId);
+        form.style.display = 'block';
+        setTimeout(() => form.classList.add('fade-in'), 50);
+    }
+
+    function showPopup(event) {
+        event.preventDefault();
+        document.getElementById('successPopup').style.display = 'flex';
+        setTimeout(() => {
+            event.target.submit();
+        }, 1500); // Delay to show popup before submitting
+    }
+
+    function closePopup() {
+        document.getElementById('successPopup').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>
