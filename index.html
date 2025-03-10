@@ -1,94 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StreamPlex-Digital library and Games</title>
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet" href="index.css">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
     <script type="module" src="app.js"></script>
 </head>
 <body>
-    <div id="message"></div>
-    <div class="title">
-        <img src="streamplex.png" class="logo">
-        <p class="app">StreamPlex</p>
+    <div class="top">
+        <div class="with-logo">
+            <div class="name-point">
+                <h1 id="welcomeMessage">Hello </h1>
+                <p class='points' id="pointsDisplay" style="margin-top: -15px;">Points earned: 0</p>
+            </div>
+            <div style="border-radius: 50%;">
+            <img onclick="location.href='faq.html';" src="streamplex.png" style="border-radius: 30%; padding: 9px; box-shadow: 0 0 10px rgba(255, 255, 255, 0.836);" >
+            </div>
+        </div>
+        <div class="id">
+            <button class="withdraw"><a href="withdrawal.html" class="withdraw-btn">Withdraw</a></button>
+            <div class="together">
+                <p class="points" style="margin-left: 10px; margin-top: -2px;">User ID:</p>
+                <div class="user_id">
+                    <p><span id="userIdDisplay"></span></p>
+                    <img id="copyUserIdBtn" src="copywhite.png">
+                    <!--<button id="copyUserIdBtn">Copy User ID</button>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="write-up">
+        <div class="content2">
+            <p><b>Unlock Academic Growth</b></p>
+            <p>Visit our <b>curated library</b> of <b>study guides, interactive lessons, and expert insights,</b> all designed to fuel your competitive edge.</p>
+            <p style="margin-top: 40px;"><b>Ready to power up your brain?</b></p>
+            <button class="btn" onclick="location.href='education.html';">Education</button>
+        </div>
+        <!--<button id="logoutBtn">Logout</button>-->
     </div>
 
-    <div class="container1" id="container1">
-        <h2>Create an account</h2>
-        <input type="text" id="username" placeholder="Username">
-        <input type="email" id="signupEmail" placeholder="Email">
-        <div class="password-container">
-            <input type="password" id="signupPassword" placeholder="Password" required>
-            <button type="button" class="toggle-password" onclick="toggleSignupPassword()">
-                👁️
-            </button>
-        </div>        
-        <button id="signupBtn">Sign Up</button>
+    <div style="margin-bottom: 20px;"></div>
+
+    <div class="content1">
+        <p><b>Challenge your mind</b></p>
+        <p><b>Think you're the Sharpest?</b></p>
+        <p>Dive into a world of <b>puzzle</b> and <b>brain teasers</b> packed with <b>tricky challenges</b> designed to test your <b>logic</b> and <b>award your thinking.</b></p>
+        <p style="margin-top: 40px;"><b>Ready to play and improve your genuis?</b></p>
+        <button class="btn" onclick="location.href='games.html';">Play Games</button>
     </div>
-
-    <div class="container2" id="container2">
-        <h2>Login</h2>
-        <input type="email" id="loginEmail" placeholder="Email">
-        <div class="password-container">
-            <input type="password" id="loginPassword" placeholder="Password" required>
-            <button type="button" class="toggle-password" onclick="toggleLoginPassword()">
-                👁️
-            </button>
-        </div>    
-        <button id="loginBtn">Login</button>
+    <div class="external">
+        <img src="whatsapp.png" alt="" class="whatsapp">
+        <img src="customercare_white.png" alt="" class="customer_care">
+        <img id="logoutBtn" src="logoutwhite.png" alt="" class="logout">
     </div>
-
-    <div class="links">
-        <p>Don't have an account? <span id="signup">Sign up</span></p>
-        <p>Already have an account? <span id="login">Login</span></p>
-        <footer>
-            <img src="rydar-tech.png">
-            <p><b>Rydar-Tech Group</b></p>
-        </footer>
-    </div>
-    <script>
-        const login=document.getElementById('login');
-        const signup=document.getElementById('signup');
-        const container1=document.getElementById('container1');
-        const container2=document.getElementById('container2');
-
-        login.addEventListener('click', () => {
-            container1.classList.remove('active');
-            container2.classList.add('active');
-        });
-
-        signup.addEventListener('click', () => {
-            container1.classList.add('active');
-            container2.classList.remove('active');
-        });
-
-        function toggleSignupPassword() {
-        const passwordInput = document.getElementById("signupPassword");
-        const toggleButton = document.querySelector(".toggle-password");
-
-    if (passwordInput.type === "password") {
-        passwordInput.type = "text";
-        toggleButton.innerText = "🙈";  // Change icon to "hide"
-    } else {
-        passwordInput.type = "password";
-        toggleButton.innerText = "👁️";  // Change icon to "show"
-    }
-}
-
-function toggleLoginPassword() {
-        const passwordInput = document.getElementById("loginPassword");
-        const toggleButton = document.querySelector(".toggle-password");
-
-    if (passwordInput.type === "password") {
-        passwordInput.type = "text";
-        toggleButton.innerText = "🙈";  // Change icon to "hide"
-    } else {
-        passwordInput.type = "password";
-        toggleButton.innerText = "👁️";  // Change icon to "show"
-    }
-}
-    </script>
 </body>
 </html>

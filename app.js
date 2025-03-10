@@ -1,6 +1,10 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
-import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-auth.js";
+import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-firestore.js";
+
+//import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+//import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+//import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyC5qQdiJpCHW6FtZnpa2RYdL-b66VqYQfk",
@@ -76,7 +80,7 @@ if (signupBtn) {
             // Display a success message then redirect after a short delay
             displayMessage('Signup successful!', 'success');
             setTimeout(() => {
-                window.location.href = 'dashboard.html';
+                window.location.href = 'index.html';
             }, 1000);
         } catch (error) {
             displayMessage('Error: ' + error.message, 'error');
@@ -95,7 +99,7 @@ if (loginBtn) {
             await signInWithEmailAndPassword(auth, email, password);
             displayMessage('Login successful!', 'success');
             setTimeout(() => {
-                window.location.href = 'dashboard.html';
+                window.location.href = 'index.html';
             }, 1000);
         } catch (error) {
             displayMessage('Error: ' + error.message, 'error');
@@ -110,7 +114,7 @@ if (document.getElementById('welcomeMessage')) {
             const userDoc = await getDoc(doc(db, "users", user.uid));
             if (userDoc.exists()) {
                 const userData = userDoc.data();
-                document.getElementById('welcomeMessage').innerText = `Hello ${userData.username}.!`;
+                document.getElementById('welcomeMessage').innerText = `Hello ${userData.username}`;
                 document.getElementById('pointsDisplay').innerText = `Points earned: ${userData.points}`;
                 document.getElementById('userIdDisplay').innerText = user.uid;
 
