@@ -16,8 +16,11 @@ body {
 }
 
 img {
-    width: 60px;
-    height: 60px;
+    width: 32px;
+    border-radius: 30%;
+    background-color: transparent;
+    padding: 6px;
+    box-shadow: 0 0 6px white;
 }
 
 .top {
@@ -34,54 +37,56 @@ img {
     align-items:first baseline;
     font-family: 'NunitoSans';
     font-size: 14px;
-    text-shadow: 0 0 3px rgb(143, 141, 141);
+    color: white;
+    text-shadow: 0 0 7px rgb(0, 0, 0);
+}
+
+h1 {
+    background-color: rgb(255, 255, 255);
+    padding: 3px 8px 3px 8px;
+    border-radius: 16px 7px 16px 0;
+    font-size: 21px;
+    border: 2px solid black;
 }
 
 .btn {
     display: flex;
     flex-wrap: wrap;
-    gap:6vh;
+    flex-direction: column;
+    gap: 2vh;
     justify-content: center;
     align-items: center;
     margin: 10px;
-    padding: 1px;
-    margin-top: -10px;
+    padding: -1px;
+    margin-top: -3px;
 }
 
 button {
     padding: 10px;
     margin: 5px;
-    width: 160px;
-    height: 120px;
-    background-image: linear-gradient(to left, rgb(217, 217, 221), rgb(160, 175, 218), rgb(110, 216, 219));
+    width: 95%;
+    /*height: 130px;*/
+    background-color: transparent;
+    /*background-image: linear-gradient(to left, rgb(217, 217, 221), rgb(160, 175, 218), rgb(110, 216, 219));*/
     border: none;
+    border-radius: 7px;
     transition: 0.2 ease-in-out;
     font-weight: 600;
     font-family: 'NunitoSans';
-    color: black;
+    color: white;
     font-size: 23px;
-    box-shadow: 0 0 10px rgb(0, 0, 0);
+    box-shadow: 0 0 3px rgb(238, 222, 222);
     transition: 0.3s ease-in-out;
 }
 
-#n1 {
-    border-radius: 33px;
-}
-
-#n2 {
-    border-radius: 33px;
+button:active {
+    scale: 0.9;
 }
 
 button:disabled {
-    color: rgb(233, 217, 217);
-    background-image: linear-gradient(to right, rgb(177, 169, 169), gray);
+    color: rgb(117, 105, 105);
+    /*background-image: linear-gradient(to right, rgb(177, 169, 169), gray);*/
     box-shadow: 0 0 0px rgb(255, 255, 255);
-}
-
-button:active {
-    scale: 0.8;
-    background-image: linear-gradient(to left, purple, blue, indigo);
-    color: whitesmoke;
 }
 
 button:active:disabled {

@@ -18,15 +18,27 @@ body {
     padding: 0;
 }
 
+.head {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 0 10px black;
+}
+
 .top {
     font-family: 'Sans';
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgb(172, 167, 167);
+    background-color: rgb(51, 47, 47);
     box-shadow: 0 0 10px black;
     padding: 3px;
     margin: 0px;
+    border-radius: 0 0 20px 20px;
 }
 
 .top-elements {
@@ -34,6 +46,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .top-name {
@@ -43,29 +56,40 @@ body {
     justify-items: center;
     align-items: center;
     font-weight: 800;
-    padding: 2px;
-    font-size: 11px;
+    padding: 0px;
     margin: 0px;
     color: white;
     text-shadow: 0 0 6px black;
     gap: 10px;
     letter-spacing: 1.5px;
     margin-left: 10px;
+    width: 100%;
+}
+
+.top-name p {
+    font-size: 110%;
 }
 
 .top-name img {
-    width: 7%;
+    width: 5.5%;
     padding: 5px;
-    background-color: transparent;
+    background-color: white;
     border-radius: 30%;
     box-shadow: 0 0 7px black;
 }
 
-.name-point {
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-    justify-content:left;
+.first {
+    background-color: rgb(49, 45, 45);
+    margin-top: 5vh;
+    width: 96%;
+    justify-content: center;
+    align-items: center;
+    margin: 5px auto;
+    font-family: 'Sans';
+    border-radius: 12px;
+    padding: 4px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 3px rgb(5, 133, 138);
 }
 
 .points-withdraw {
@@ -78,36 +102,51 @@ body {
     margin-top: 15px;
 }
 
+.second {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .points {
-    font-size: 11px;
-    color: #000000;
+    font-size: 100%;
+    color: white;
     padding: 1px;
-    margin: 1px;
-    font-weight: 600;
+    margin: 10px;
+    font-weight: 400;
     width: 100%;
 }
 
 .withdraw-btn {
     text-decoration: none;
     color: black;
-    text-shadow: 0 0 5px white;
+    transition: 0.3s ease-in-out;
+}
+
+.withdraw-btn:active {
+    color: white;
 }
 
 .withdraw {
-    background-image: linear-gradient(to left, rgb(92, 88, 88), rgb(129, 235, 229), rgb(194, 226, 118));
-    width: 50%;
+    background-color: whitesmoke;
+    width: fit-content;
     margin: 10px;
-    border-radius: 7px;
+    border-radius: 8px;
+    border: none;
     letter-spacing: 1px;
-    font-weight: 600;
+    font-weight: 400;
     transition: 0.3s ease-in-out;
-    font-family: 'Math';
-    padding: 6px;
-    font-size: 11px;
+    font-family: 'Sans';
+    padding:7px 10px 7px 10px;
+    font-size: 16px;
     margin-top: -8px;
 }
 .withdraw:active {
-    background-color: black;
+    scale: 0.95;
+    background-color: rgb(36, 34, 34);
+    box-shadow: 0 0 3px white;
+    color: white;
 }
 
 h1 {
@@ -116,8 +155,10 @@ h1 {
 }
 
 .user {
-    font-size: 12px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    font-family: 'Sans';
 }
 
 .userid {
@@ -128,22 +169,22 @@ h1 {
     justify-content: right;
     padding: 1px;
     margin-right: 5px;
-    margin-top: -30px;
+    margin-top: -10px;
     font-family: 'Sans';
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
 
 .userid img {
-    width: 16px;
+    width: 21px;
 }
 
 .userid img:active {
     scale: 0.95;
     background-color: transparent;
-    box-shadow: 0 0 10px black;
+    box-shadow: 0 0 10px white;
     border-radius: 50%;
-    padding: 2px;
+    padding: 6px;
 }
 
 #userIdDisplay {
@@ -154,9 +195,9 @@ h1 {
     color: black;
 }
 
-button {
+.btn {
     padding: 10px 20px;
-    background-color: none;
+    background-color: rgb(252, 252, 252);
     color: black;
     border: none;
     cursor: pointer;
@@ -170,12 +211,12 @@ button {
     font-size: 17px;
 }
 
-button:hover {
+.btn:hover {
     background-color: rgb(58, 55, 55);
 }
 
-button:disabled {
-    background-color: transparent;
+.btn:disabled {
+    background-color: rgba(201, 184, 184, 0.384);
     color: rgb(218, 210, 210);
 }
 
@@ -185,7 +226,7 @@ button:disabled {
     flex-basis: 25%;
     padding: 1px;
     margin: 1px;
-    margin-top: 2vh;
+    margin-top: 36vh;
     margin-bottom: 10vh;
     gap: 2vh;
     justify-content: center;
@@ -197,12 +238,12 @@ button:disabled {
     align-items: center;
     justify-items: center;
     text-align: center;
-    background-color: rgba(128, 128, 128, 0.096);
+    background-color: rgba(10, 95, 165, 0.438);
     padding: 20px;
     margin: 8px;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.61);
     border-radius: 4px;
-    width: 60% ;
+    width:82% ;
 }
 
 .content2 {
@@ -212,16 +253,17 @@ button:disabled {
     align-items: center;
     justify-items: center;
     text-align: center;
-    background-color: rgba(128, 128, 128, 0.096);
+    background-color: rgba(9, 156, 156, 0.616);
     margin-bottom: 100px;
     padding: 20px;
     margin: 8px;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.61);
     border-radius: 4px;
-    width: 60%;
+    width: 86%;
 }
 
 .whatsapp {
+    display: none;
     width: 45px;
     position: fixed;
     bottom: 15px;
@@ -232,7 +274,7 @@ button:disabled {
 .customer_care {
     width: 35px;
     position: fixed;
-    bottom: 70px;
+    bottom: 22px;
     right: 10px;
     background-color: rgb(29, 151, 5);
     padding: 5px;
@@ -246,7 +288,7 @@ button:disabled {
     padding: 5px;
     border-radius: 50%;
     position: fixed;
-    bottom: 15px;
+    bottom: 22px;
     left: 10px;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.815);
 }

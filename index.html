@@ -1,56 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>StreamPlex-User/Dashboard</title>
     <link rel="stylesheet" href="dashboard.css">
     <script type="module" src="app.js"></script>
 </head>
 <body>
-    <div class="top">
-        <div class="with-logo">
-            <div class="name-point">
-                <h1 id="welcomeMessage">Hello </h1>
-                <p class='points' id="pointsDisplay" style="margin-top: -15px;">Points earned: 0</p>
-            </div>
-            <div style="border-radius: 50%;">
-            <img onclick="location.href='faq.html';" src="streamplex.png" style="border-radius: 30%; padding: 9px; box-shadow: 0 0 10px rgba(255, 255, 255, 0.836);" >
-            </div>
-        </div>
-        <div class="id">
-            <button class="withdraw"><a href="withdrawal.html" class="withdraw-btn">Withdraw</a></button>
-            <div class="together">
-                <p class="points" style="margin-left: 10px; margin-top: -2px;">User ID:</p>
-                <div class="user_id">
-                    <p><span id="userIdDisplay"></span></p>
-                    <img id="copyUserIdBtn" src="copywhite.png">
-                    <!--<button id="copyUserIdBtn">Copy User ID</button>-->
+    <div class="head">
+        <div class="top">
+            <div class="top-elements">
+                <div class="top-name" onclick="location.href='faq.html';">
+                    <img src="streamplex.png">
+                    <p>STREAMPLEX</p>
                 </div>
             </div>
         </div>
+
+        <h1 id="welcomeMessage" style="margin-top: 13vh; margin-bottom: 0; text-align: center; width: 100%;" > </h1>
+
+        <div class="first">
+            <p></p>
+            <div class="second">
+                <p class='points' id="pointsDisplay" style="margin-top: -15px;"></p>
+                <button class="withdraw" onclick="location.href='withdrawal.html';"><a href="withdrawal.html" class="withdraw-btn">Withdraw</a></button>
+            </div>
+            <div class="userid">
+                <p class="user">Copy User ID:</p>
+                <p><span id="userIdDisplay"></span></p>
+                <img id="copyUserIdBtn" src="copywhite.png">
+            </div>
+        </div>
     </div>
+
     <div class="write-up">
         <div class="content2">
             <p><b>Unlock Academic Growth</b></p>
             <p>Visit our <b>curated library</b> of <b>study guides, interactive lessons, and expert insights,</b> all designed to fuel your competitive edge.</p>
             <p style="margin-top: 40px;"><b>Ready to power up your brain?</b></p>
-            <button class="btn" onclick="location.href='education.html';">Education</button>
+            <button class="btn" onclick="location.href='education.html';" disabled>Education</button>
         </div>
-        <!--<button id="logoutBtn">Logout</button>-->
-    </div>
 
-    <div style="margin-bottom: 20px;"></div>
-
-    <div class="content1">
-        <p><b>Challenge your mind</b></p>
-        <p><b>Think you're the Sharpest?</b></p>
-        <p>Dive into a world of <b>puzzle</b> and <b>brain teasers</b> packed with <b>tricky challenges</b> designed to test your <b>logic</b> and <b>award your thinking.</b></p>
-        <p style="margin-top: 40px;"><b>Ready to play and improve your genuis?</b></p>
-        <button class="btn" onclick="location.href='games.html';">Play Games</button>
+        <div class="content1">
+            <p><b>Challenge your mind</b></p>
+            <p><b>Think you're the Sharpest?</b></p>
+            <p>Dive into a world of <b>puzzle</b> and <b>brain teasers</b> packed with <b>tricky challenges</b> designed to test your <b>logic</b> and <b>award your thinking.</b></p>
+            <p style="margin-top: 40px;"><b>Ready to play and improve your genuis?</b></p>
+            <button class="btn" onclick="location.href='games.html';">Play Games</button>
+        </div>
     </div>
     <div class="external">
-        <img src="whatsapp.png" alt="" class="whatsapp">
-        <img src="customercare_white.png" alt="" class="customer_care">
-        <img id="logoutBtn" src="logoutwhite.png" alt="" class="logout">
+        <img src="whatsapp.png" class="whatsapp">
+        <img src="customercare_white.png" class="customer_care" onclick="location.href='https://wa.me/message/7P726ES2BNC3P1';">
+        <img id="logoutBtn" src="logoutwhite.png" class="logout">
     </div>
 </body>
 </html>
